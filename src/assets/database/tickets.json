@@ -1,0 +1,128 @@
+[
+  {
+    "id": "1",
+    "price": 13000,
+    "carrierCode": "carrier3",
+    "departure_time": "08:00",
+    "arrival_time": "18:30",
+    "departure_date": "2023-08-21",
+    "arrival_date": "2023-08-22",
+    "stops": 2,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  },
+  {
+    "id": "2",
+    "price": 17400,
+    "carrierCode": "carrier3",
+    "departure_time": "11:00",
+    "arrival_time": "20:30",
+    "departure_date": "2023-08-21",
+    "arrival_date": "2023-08-21",
+    "stops": 1,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  },
+  {
+    "id": "3",
+    "price": 15600,
+    "carrierCode": "carrier1",
+    "departure_time": "22:30",
+    "arrival_time": "03:45",
+    "departure_date": "2023-08-23",
+    "arrival_date": "2023-08-24",
+    "stops": 1,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  },
+  {
+    "id": "4",
+    "price": 24700,
+    "carrierCode": "carrier1",
+    "departure_time": "09:00",
+    "arrival_time": "13:00",
+    "departure_date": "2023-08-24",
+    "arrival_date": "2023-08-24",
+    "stops": 0,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  },
+  {
+    "id": "5",
+    "price": 28350,
+    "carrierCode": "carrier1",
+    "departure_time": "16:00",
+    "arrival_time": "22:00",
+    "departure_date": "2023-08-25",
+    "arrival_date": "2023-08-25",
+    "stops": 0,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  },
+  {
+    "id": "6",
+    "price": 12550,
+    "carrierCode": "carrier2",
+    "departure_time": "07:00",
+    "arrival_time": "11:00",
+    "departure_date": "2023-08-26",
+    "arrival_date": "2023-08-27",
+    "stops": 2,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  },
+  {
+    "id": "7",
+    "price": 10100,
+    "carrierCode": "carrier3",
+    "departure_time": "08:00",
+    "arrival_time": "17:30",
+    "departure_date": "2023-08-21",
+    "arrival_date": "2023-08-22",
+    "stops": 3,
+    "departure_city": {
+      "code": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival_city": {
+      "code": "TLV",
+      "name": "Тель-Авив"
+    }
+  }
+]
