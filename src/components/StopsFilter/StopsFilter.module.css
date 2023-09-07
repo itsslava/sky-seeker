@@ -1,0 +1,52 @@
+.stops_title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.input_wrapper:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* кастомный чекбокс */
+.custom_checkbox {
+  display: none;
+}
+
+.custom_label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: #fff;
+  border: 2px solid var(--light-grey);
+  border-radius: 3px;
+}
+
+.custom_checkbox:checked ~ .custom_label .checkmark {
+  background-color: #fff;
+  border: 2px solid var(--secondary);
+}
+
+.custom_checkbox:checked ~ .custom_label .checkmark:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 7px;
+  height: 8px;
+  border: solid var(--secondary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
