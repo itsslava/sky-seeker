@@ -2,6 +2,7 @@
   --text-white: #fff;
   --text: #434343;
   --primary: #a1d0f7;
+  --secondary: #549dd2;
   --accent: #faa857;
   --light-grey: #e0e0e0;
   --dark-grey: #929292;
@@ -62,4 +63,9 @@ img,
 svg {
   max-width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
 }
