@@ -3,7 +3,7 @@
 
   margin-bottom: 20px;
 
-  max-width: 800px;
+  max-width: 900px;
   border-radius: 10px;
 }
 
@@ -17,10 +17,10 @@
   align-items: center;
   justify-content: center;
 
-  border-right: 2px solid #e0e0e0;
+  border-right: 2px solid var(--light-grey);
 
   padding: 20px 20px;
-  min-width: 375px;
+  max-width: 400px;
 }
 
 .logo {
@@ -78,16 +78,16 @@
 }
 
 .city {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 
   margin-bottom: 5px;
 }
 
 .date {
-  font-size: 15px;
+  font-size: 13px;
 
-  color: #929292;
+  color: var(--dark-grey);
 }
 
 .transfer {
@@ -101,5 +101,5 @@
 .transfer_count {
   text-transform: uppercase;
   font-size: 13px;
-  color: #929292;
+  color: var(--dark-grey);
 }

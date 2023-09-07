@@ -1,3 +1,24 @@
+:root {
+  --text-white: #fff;
+  --text: #434343;
+  --primary: #a1d0f7;
+  --accent: #faa857;
+  --light-grey: #e0e0e0;
+  --dark-grey: #929292;
+}
+
+/* body styles */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f7fa;
+
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%)); /* убирает прыгающий отступ при появлении скроллбара */
+
+  color: var(--text);
+}
+
 /* reset styles */
 * {
   padding: 0px;
