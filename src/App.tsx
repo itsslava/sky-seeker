@@ -1,7 +1,37 @@
-import './App.css';
-import Ticket from './components/Ticket/Ticket';
+import { useEffect, useState } from 'react';
 
+import Ticket from './components/Ticket/Ticket';
+import StopsFilter from './components/StopsFilter/StopsFilter';
+import SortByPrice from './components/SortByPrice/SortByPrice';
+import CurrencySelector from './components/CurrencySelector/CurrencySelector';
+
+import { TicketProps } from './components/Ticket/Ticket.interface';
+import ticketsData from './assets/database/tickets.json';
+
+import './App.css';
+
+// сортировка билетов по цене
+const sortTickets = (tickets: TicketProps[], order: 'asc' | 'desc') => {
+  return [...tickets].sort((a, b) => (order === 'asc' ? a.price - b.price : b.price - a.price));
+};
+// фильтрация билетов по количеству пересадок
+const filterTickets = (tickets: TicketProps[], stops: number[]) => {
+  return tickets.filter(
+    (ticket) => stops.length === 0 || stops.includes(-1) || stops.includes(ticket.stops),
+  );
+};
 function App() {
+  const [sortedTickets, setSortedTickets] = useState<TicketProps[]>([]);
+  const [selectedStops, setSelectedStops] = useState<number[]>([-1]);
+  const [currentCurrency, setCurrentCurrency] = useState<'USD' | 'RUB' | 'EUR'>('RUB');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+
+  useEffect(() => {
+    setSortedTickets(sortTickets(ticketsData, sortOrder));
+  }, [sortOrder]);
+
+  const filteredTickets = filterTickets(sortedTickets, selectedStops);
+
   return (
     <>
       <header className="header">
@@ -9,19 +39,19 @@ function App() {
         <p className="header__tagline">Поиск авиабилетов</p>
       </header>
       <main className="main">
-        <Ticket
-          id={'1'}
-          price={5500}
-          carrierCode={'carrier1'}
-          departure_time={'08:30'}
-          arrival_time={'15:45'}
-          departure_date={'08/10/2023'}
-          arrival_date={'08/10/2023'}
-          stops={0}
-          departure_city={{ code: 'VVO', name: 'Владивосток' }}
-          arrival_city={{ code: 'TLV', name: 'Тель-Авив' }}
-          currentCurrency={'RUB'}
-        />
+        <div className="filter-list">
+          <StopsFilter selectedStops={selectedStops} onChange={setSelectedStops} />
+          <SortByPrice sortOrder={sortOrder} onChange={setSortOrder} />
+          <CurrencySelector
+            currentCurrency={currentCurrency}
+            onChangeCurrency={setCurrentCurrency}
+          />
+        </div>
+        <div className="tickets-list">
+          {filteredTickets.map((ticket: TicketProps) => (
+            <Ticket key={ticket.id} {...ticket} currentCurrency={currentCurrency} />
+          ))}
+        </div>
       </main>
     </>
   );
