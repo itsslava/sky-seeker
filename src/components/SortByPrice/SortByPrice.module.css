@@ -1,0 +1,29 @@
+.price_title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px;
+
+  border: 2px solid var(--light-grey);
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease-in;
+  font-size: 18px;
+}
+
+.button:hover,
+.active {
+  background-color: var(--secondary);
+  color: var(--text-white);
+  border: 2px solid var(--secondary);
+}
