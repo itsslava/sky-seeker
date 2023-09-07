@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import styles from './StopsFilter.module.css';
 import { StopsFilterProps } from './StopsFilter.interface';
 
@@ -11,46 +11,20 @@ const stopsOptions = [
 ];
 
 const StopsFilter: React.FC<StopsFilterProps> = ({ selectedStops, onChange }) => {
-  //     const handleCheckboxChange = (stopCount: number) => {
-  //     if (stopCount === -1) {
-  //       onChange([-1]);
-  //     } else {
-  //       if (selectedStops.includes(-1)) {
-  //         onChange([stopCount]);
-  //       } else if (selectedStops.includes(stopCount)) {
-  //         const updatedStops = selectedStops.filter((stop) => stop !== stopCount);
-  //         onChange(updatedStops.length === 0 ? [-1] : updatedStops);
-  //       } else {
-  //         onChange([...selectedStops, stopCount]);
-  //       }
-  //     }
-  //   };
-  const handleAllTicketsSelection = useCallback(() => {
-    onChange([-1]);
-  }, [onChange]);
-
-  const handleSpecificStopSelection = useCallback(
-    (stopCount: number) => {
-      if (selectedStops.includes(stopCount)) {
+  const handleCheckboxChange = (stopCount: number) => {
+    if (stopCount === -1) {
+      onChange([-1]);
+    } else {
+      if (selectedStops.includes(-1)) {
+        onChange([stopCount]);
+      } else if (selectedStops.includes(stopCount)) {
         const updatedStops = selectedStops.filter((stop) => stop !== stopCount);
         onChange(updatedStops.length === 0 ? [-1] : updatedStops);
       } else {
         onChange([...selectedStops, stopCount]);
       }
-    },
-    [selectedStops, onChange],
-  );
-
-  const handleCheckboxChange = useCallback(
-    (stopCount: number) => {
-      if (stopCount === -1) {
-        handleAllTicketsSelection();
-      } else if (selectedStops.includes(-1) || selectedStops.includes(stopCount)) {
-        handleSpecificStopSelection(stopCount);
-      }
-    },
-    [selectedStops, handleAllTicketsSelection, handleSpecificStopSelection],
-  );
+    }
+  };
 
   return (
     <div>
