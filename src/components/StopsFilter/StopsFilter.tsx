@@ -13,15 +13,15 @@ const stopsOptions = [
 const StopsFilter: React.FC<StopsFilterProps> = ({ selectedStops, onChange }) => {
   const handleCheckboxChange = (stopCount: number) => {
     if (stopCount === -1) {
-      onChange([-1]);
+      onChange([-1]); // проверка на 'все билеты'
     } else {
       if (selectedStops.includes(-1)) {
-        onChange([stopCount]);
+        onChange([stopCount]); // если ранее были выбраны 'все билеты' и будет выбран другой чекбокс, то 'все билеты' снимается
       } else if (selectedStops.includes(stopCount)) {
         const updatedStops = selectedStops.filter((stop) => stop !== stopCount);
-        onChange(updatedStops.length === 0 ? [-1] : updatedStops);
+        onChange(updatedStops.length === 0 ? [-1] : updatedStops); // проверка на снятие выбранного чекбокса
       } else {
-        onChange([...selectedStops, stopCount]);
+        onChange([...selectedStops, stopCount]); // добавление выбранного чекбокса
       }
     }
   };
