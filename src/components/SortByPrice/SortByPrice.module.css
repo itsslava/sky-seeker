@@ -1,7 +1,3 @@
-.price_ie11 {
-  margin-bottom: 20px;
-}
-
 .price_title {
   font-size: 18px;
   text-transform: uppercase;
@@ -18,7 +14,7 @@
 .button {
   padding: 10px;
 
-  border: 2px solid #929292;
+  border: 2px solid var(--light-grey);
   border-radius: 5px;
   background-color: white;
   transition: all 0.3s ease-in;

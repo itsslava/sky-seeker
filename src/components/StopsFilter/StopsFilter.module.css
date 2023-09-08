@@ -1,7 +1,3 @@
-.stops_ie11 {
-  margin-bottom: 20px;
-}
-
 .stops_title {
   font-size: 18px;
   text-transform: uppercase;
@@ -35,15 +31,13 @@
   height: 21px;
   width: 21px;
   background-color: #fff;
-  /* border: 2px solid var(--light-grey); */
-  border: 2px solid #929292;
+  border: 2px solid var(--light-grey);
   border-radius: 3px;
 }
 
 .custom_checkbox:checked ~ .custom_label .checkmark {
   background-color: #fff;
-  /* border: 2px solid var(--secondary); */
-  border: 2px solid #549dd2;
+  border: 2px solid var(--secondary);
 }
 
 .custom_checkbox:checked ~ .custom_label .checkmark:after {
@@ -53,8 +47,7 @@
   top: 3px;
   width: 7px;
   height: 8px;
-  /* border: solid var(--secondary); */
-  border: solid #549dd2;
+  border: solid var(--secondary);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

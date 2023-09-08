@@ -12,7 +12,9 @@ const CurrencySelector: React.FC<CurrencySelectorProps> = ({
         {['USD', 'RUB', 'EUR'].map((currency) => (
           <button
             key={currency}
-            className={`${styles.button} ${currentCurrency === currency ? styles.active : ''}`}
+            className={`${styles.button} ${styles.button_currency_ie11} ${
+              currentCurrency === currency ? styles.active : ''
+            }`}
             onClick={() => onChangeCurrency(currency as 'USD' | 'RUB' | 'EUR')}
           >
             {currency}

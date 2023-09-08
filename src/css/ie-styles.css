@@ -1,0 +1,38 @@
+/*  SortByPrice */
+.price_ie11 {
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-bottom: 10px;
+}
+
+.button:last-child {
+  margin-bottom: 0;
+}
+
+/* StopsFilter */
+
+.stops_ie11 {
+  margin-bottom: 20px;
+}
+
+/* CurrencySelector */
+
+.currency_ie11 {
+  margin-bottom: 20px;
+}
+
+.button_currency_ie11 {
+  max-width: 80px;
+}
+
+/* App.css */
+
+.header_title {
+  margin-bottom: 20px;
+}
+
+.filter-list {
+  margin-right: 20px;
+}
