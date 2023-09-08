@@ -6,7 +6,7 @@ const CurrencySelector: React.FC<CurrencySelectorProps> = ({
   onChangeCurrency,
 }) => {
   return (
-    <div className={styles.currency}>
+    <div className={styles.currency_ie11}>
       <h3 className={styles.currency_title}>Валюта</h3>
       <div className={styles.currency_container}>
         {['USD', 'RUB', 'EUR'].map((currency) => (

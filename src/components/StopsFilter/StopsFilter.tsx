@@ -27,7 +27,7 @@ const StopsFilter: React.FC<StopsFilterProps> = ({ selectedStops, onChange }) =>
   };
 
   return (
-    <div>
+    <div className={styles.stops_ie11}>
       <h3 className={styles.stops_title}>Количество пересадок</h3>
       {stopsOptions.map((option) => (
         <div className={styles.input_wrapper} key={option.value}>

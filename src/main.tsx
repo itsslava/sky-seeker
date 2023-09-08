@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import 'ie11-custom-properties';
 
 import App from './App.tsx';
 import './index.css';

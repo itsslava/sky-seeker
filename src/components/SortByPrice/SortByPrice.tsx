@@ -4,7 +4,7 @@ import { SortByPriceProps } from './SortByPrice.interface';
 
 const SortByPrice: React.FC<SortByPriceProps> = ({ sortOrder, onChange }) => {
   return (
-    <div>
+    <div className={styles.price_ie11}>
       <h3 className={styles.price_title}>Сортировка по цене</h3>
       <div className={styles.wrapper}>
         <button
