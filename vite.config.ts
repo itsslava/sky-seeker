@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import TsconfigPaths from 'vite-plugin-tsconfig-paths';
 import autoprefixer from 'autoprefixer';
-import legacy from 'vite-plugin-legacy';
+import legacy from '@vitejs/plugin-legacy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
