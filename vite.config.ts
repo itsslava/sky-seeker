@@ -11,6 +11,7 @@ export default defineConfig({
     TsconfigPaths(),
     legacy({
       targets: ['ie >= 11'],
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
     }),
   ],
   css: {
