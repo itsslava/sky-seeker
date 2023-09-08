@@ -36,3 +36,13 @@
   background-color: var(--secondary);
   color: var(--text-white);
 }
+
+/* IE11 */
+
+.currency_ie11 {
+  margin-bottom: 20px;
+}
+
+.button_currency_ie11 {
+  max-width: 80px;
+}
