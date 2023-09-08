@@ -60,8 +60,6 @@
   .custom_checkbox:checked ~ .custom_label .checkmark:after {
     /* border-width: 0 2px 0 0; */
     border-top-width: 0;
-    border-right-width: 2px;
     border-left-width: 0;
-    border-bottom-width: 0;
   }
 }
