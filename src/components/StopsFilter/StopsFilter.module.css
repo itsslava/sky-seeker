@@ -47,7 +47,7 @@
   top: 3px;
   width: 7px;
   height: 8px;
-  border: 2px solid var(--secondary);
+  border: solid var(--secondary);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -56,5 +56,12 @@
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .stops_ie11 {
     margin-bottom: 20px;
+  }
+  .custom_checkbox:checked ~ .custom_label .checkmark:after {
+    /* border-width: 0 2px 2px 0; */
+    border-top-width: 0;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 0px;
   }
 }
