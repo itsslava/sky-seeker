@@ -103,3 +103,14 @@
   font-size: 13px;
   color: var(--dark-grey);
 }
+
+/* для IE11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .departure {
+    margin-right: 10px;
+  }
+
+  .transfer {
+    margin-right: 10px;
+  }
+}

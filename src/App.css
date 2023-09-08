@@ -49,12 +49,17 @@
   border-radius: 10px;
 }
 
-/* IE11 */
+/* для IE11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header {
+    margin-bottom: 20px;
+  }
 
-.header_title {
-  margin-bottom: 20px;
-}
+  .header_title {
+    margin-bottom: 20px;
+  }
 
-.filter-list {
-  margin-right: 20px;
+  .filter-list {
+    margin-right: 20px;
+  }
 }

@@ -28,15 +28,17 @@
   border: 2px solid var(--secondary);
 }
 
-/* IE11 */
-.price_ie11 {
-  margin-bottom: 20px;
-}
+/* для IE11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .price_ie11 {
+    margin-bottom: 20px;
+  }
 
-.button {
-  margin-bottom: 10px;
-}
+  .button {
+    margin-bottom: 10px;
+  }
 
-.button:last-child {
-  margin-bottom: 0;
+  .button:last-child {
+    margin-bottom: 0;
+  }
 }
