@@ -35,4 +35,4 @@ Sky Seeker - это современный веб-проект, разработ
 
 `npm run dev`
 
-Так же проект доступен по ссылке [SkySeeker](https://sky-seeker-37tcri3rf-itsslava.vercel.app)
+Так же проект доступен по ссылке [SkySeeker](https://sky-seeker.vercel.app)
